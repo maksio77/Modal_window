@@ -31,8 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <button onClick={this.openModal} className="open-modal-btn">✨ Open modal</button>
-        {open && (
-          <div className="overlay">
+        <div className={`overlay animated ${open? 'show' : ''}`}>
             <div className="modal">
               <svg onClick={this.closeModal} height="200" viewBox="0 0 200 200" width="200">
                 <title />
@@ -41,7 +40,6 @@ class App extends Component {
               <img alt="gif" src="https://media2.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" />
             </div>
           </div> 
-        )}
       </div>
     );
   }
